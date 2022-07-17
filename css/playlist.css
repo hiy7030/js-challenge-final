@@ -1,0 +1,29 @@
+#playlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-boxcolor);
+  padding: 5px 10px;
+  border-radius: 25px;
+  margin-bottom: 100px;
+}
+
+#playlist h5 {
+  font-size: 20px;
+}
+
+#playlist h6 {
+  font-size: 17px;
+  margin: 0px 13px;
+}
+
+#playlist button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  border: var(--main-border);
+  border-radius: 50%;
+  padding: 5px;
+  background: none;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Today's Record</title>
+  </head>
+  <body>
+    <div class="main-row hidden">
+      <div class="main-column">
+        <div id="clock">
+          <h3>지금 시간은</h3>
+          <h4></h4>
+        </div>
+      </div>
+      <div class="main-column">
+        <div id="weather">
+          <h3>지금 날씨는</h3>
+          <img />
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-row">
+      <div id="todos" class="hidden">
+        <div class="main-column">
+          <form id="todo-form">
+            <h3>오늘의 할일</h3>
+            <input type="text" placeholder="여기에 입력해주세요" />
+          </form>
+
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+
+      <div class="main-column">
+        <form id="login-form" class="">
+          <label for="name-value">당신의 이름을 적어주세요.</label>
+          <input id="name-value" type="text" maxlength="8" required />
+          <button type="submit">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+        </form>
+
+        <h1 id="greeting" class="hidden"></h1>
+
+        <div id="playlist" class="hidden">
+          <h5></h5>
+          <h6></h6>
+          <a>
+            <button>
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div id="images" class="main-column hidden">
+        <h2>오늘의 최고심</h2>
+        <div id="image-quote"></div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/image.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/493cc16663.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

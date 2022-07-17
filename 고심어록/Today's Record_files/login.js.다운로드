@@ -1,0 +1,45 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const hiddenClock = document.querySelector("#clock");
+const hiddenToDoForm = document.querySelector("#todo-form");
+const hiddenToDoList = document.querySelector("#todo-list");
+const hiddenPlaylist = document.querySelector("#playlist");
+const hiddenWeather = document.querySelector("#weather");
+const hiddenImage = document.querySelector("#image-quote");
+
+const HIDDEN_CLASS = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+  event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASS);
+  const userName = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, userName);
+  greeting.innerText = `반가워요! ${userName}`;
+  greeting.classList.remove(HIDDEN_CLASS);
+  hiddenClock.classList.remove(HIDDEN_CLASS);
+  hiddenToDoForm.classList.remove(HIDDEN_CLASS);
+  hiddenToDoList.classList.remove(HIDDEN_CLASS);
+  hiddenPlaylist.classList.remove(HIDDEN_CLASS);
+  hiddenWeather.classList.remove(HIDDEN_CLASS);
+  hiddenImage.classList.remove(HIDDEN_CLASS);
+}
+
+const localStorageUsername = localStorage.getItem(USERNAME_KEY);
+
+if (localStorageUsername === null) {
+  loginForm.classList.remove(HIDDEN_CLASS);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  loginForm.classList.add(HIDDEN_CLASS);
+  greeting.innerText = `반가워요! ${localStorageUsername}`;
+  greeting.classList.remove(HIDDEN_CLASS);
+  hiddenClock.classList.remove(HIDDEN_CLASS);
+  hiddenToDoForm.classList.remove(HIDDEN_CLASS);
+  hiddenToDoList.classList.remove(HIDDEN_CLASS);
+  hiddenPlaylist.classList.remove(HIDDEN_CLASS);
+  hiddenWeather.classList.remove(HIDDEN_CLASS);
+  hiddenImage.classList.remove(HIDDEN_CLASS);
+}
